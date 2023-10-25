@@ -10,7 +10,7 @@ class UserInput(BaseModel):
     user_input: str
 
 
-'''# ... (APIキー設定など)'''
+# ... (APIキー設定など)
 
 # 質問を受け付けるエンドポイント
 @app.post("/ask/")
