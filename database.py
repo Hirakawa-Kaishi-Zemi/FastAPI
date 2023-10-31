@@ -38,7 +38,8 @@ def init_db(preinsert=False, drop_if_exists=False):
             conn.execute('''
             INSERT INTO `users` (`email`) 
             VALUES 
-            ("sato@test.com"), ("mineno@test.com"), ("tooyama@test.com"), ("hirayama@test.com"), ("sakai@test.com");            
+            ("sato@test.com"), ("mineno@test.com"), ("tooyama@test.com"), 
+            ("hirayama@test.com"), ("sakai@test.com");            
             ''')
 
 
@@ -161,11 +162,10 @@ def main():
     pprint(results)
     pprint(user_model.get_query())
 
-
-    #is_ok = user_model.insert({
-#        'email': 'hirakawa.hideki@kaishi-pu.ac.jp',
-#        'token': 'ototototo',
-#    })
+    # is_ok = user_model.insert({
+    #        'email': 'hirakawa.hideki@kaishi-pu.ac.jp',
+    #        'token': 'ototototo',
+    #    })
 
     user_model.update({
         'email': '2221@test.com'
