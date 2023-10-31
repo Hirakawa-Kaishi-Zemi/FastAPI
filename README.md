@@ -76,6 +76,13 @@ $ python3 -m venv <venv>
 pip install -r requirements.txt
 ```
 
+ローカルのデータベースを作成します。
+
+```shell
+touch database.sqlite
+```
+
+> データベースファイル名は `.env` の `DB_DATABASE` で指定してください。 
 
 ### 3. API サーバーの起動
 

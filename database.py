@@ -3,7 +3,7 @@ import sqlite3
 from settings import DB_DATABASE
 
 
-def init_db(preinsert=False, drop_if_exists=False):
+def init_db(pre_insert=False, drop_if_exists=False):
     with sqlite3.connect(DB_DATABASE) as conn:
         if drop_if_exists:
             conn.execute('''
@@ -34,7 +34,7 @@ def init_db(preinsert=False, drop_if_exists=False):
         );
         ''')
 
-        if preinsert:
+        if pre_insert:
             conn.execute('''
             INSERT INTO `users` (`email`) 
             VALUES 
