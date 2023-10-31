@@ -23,13 +23,14 @@ cd /path/to/cloned/directory
 ---
 
 > ローカルにインストールされたグローバルなPythonインタプリタを使用する前に、
-プロジェクト固有の独立した Virtualenv 環境の利用を検討してください。\
-Virtualenv 環境は、ローカルコンピュータにインストールされたPythonとは別に、
-プロジェクトごとに独立した Python インタプリタ、サードパーティパッケージのバージョンを管理できる便利な機能です。
+> プロジェクト固有の独立した Virtualenv 環境の利用を検討してください。\
+> Virtualenv 環境は、ローカルコンピュータにインストールされたPythonとは別に、
+> プロジェクトごとに独立した Python インタプリタ、サードパーティパッケージのバージョンを管理できる便利な機能です。
 
 [Virtualenv](https://docs.python.org/ja/3/library/venv.html) を利用する場合は、以下の手順で作成・有効化を行います。
 
 #### 仮想環境の作成
+
 ```shell
  # <venv> には仮想環境名を指定します。
  # (ex) python -m venv venv  -> `venv` という仮想環境を作成する
@@ -61,7 +62,7 @@ $ python3 -m venv <venv>
     ```shell
     C:\> <venv>\Scripts\activate.bat
     ```
-  
+
 - PowerShell
     ```shell
     PS C:\> <venv>\Scripts\Activate.ps1
@@ -74,6 +75,14 @@ $ python3 -m venv <venv>
 ```shell
 pip install -r requirements.txt
 ```
+
+ローカルのデータベースを作成します。
+
+```shell
+touch database.sqlite
+```
+
+> データベースファイル名は `.env` の `DB_DATABASE` で指定してください。 
 
 ### 3. API サーバーの起動
 
