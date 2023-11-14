@@ -9,7 +9,7 @@
 ### 1. リポジトリをクローンする
 
 ```shell
-git clone git@github.com:Hirakawa-Kaishi-Zemi/FastAPI.git
+git clone git@github.com:Hirakawa-Kaishi-Zemi/OLS_ChatFunction.git
 ```
 
 以降の手順は、プロジェクトディレクトリで行います。
